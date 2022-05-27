@@ -1,0 +1,73 @@
+@import '/components/_import.less';
+@import url('https://use.typekit.net/thp7pvj.css');
+
+@global-font-family:                            realist, sans-serif;
+@base-heading-font-weight:                      bold;
+@global-font-size:                              16px;
+@global-line-height:                            1.5;
+@global-2xlarge-font-size:                      4rem; // h1
+@global-xlarge-font-size:                       2rem; // h2
+@global-large-font-size:                        1rem; // 1.5rem Lead
+@global-small-font-size:                        0.75rem;
+
+@global-color:                                  #666;
+@global-emphasis-color:                         #000; // #333;
+@global-muted-color:                            #999;
+@global-link-color:                             #ca2929;
+@global-link-hover-color:                       darken(@global-link-color, 5%);
+@global-inverse-color:                          #fff;
+@global-background:                             #fff;
+@global-muted-background:                       #f8f8f8;
+@global-primary-background:                     #ca2929;
+@global-secondary-background:                   #222;
+
+@global-margin:                                 @global-font-size;
+@global-small-margin:                           @global-small-font-size;
+@global-medium-margin:                          @global-xlarge-font-size;
+@global-large-margin:                           @global-2xlarge-font-size;
+@global-xlarge-margin:                          6.854rem;
+@global-gutter:                                 @global-font-size;
+@global-small-gutter:                           @global-small-font-size;
+@global-medium-gutter:                          @global-xlarge-font-size;
+@global-large-gutter:                           @global-2xlarge-font-size;
+
+a {
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: none;
+}
+
+/**********/
+/* UI Kit */
+/**********/
+
+// Button
+
+@button-primary-background:                     @global-primary-background !important;
+@button-primary-color:                          @global-inverse-color !important;
+.uk-button {
+    font-weight: bold;
+}
+
+/**********/
+/* Custom */
+/**********/
+
+.crack {
+    animation: crack 4s forwards;
+}
+@keyframes crack {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(400deg);
+    }
+    66% {
+        transform: rotate(-200deg);
+    }
+    100% {
+        transform: rotate(100deg);
+    }
+}

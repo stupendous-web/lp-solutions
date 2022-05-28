@@ -486,9 +486,17 @@ export default function Home() {
         >
           <div className={"uk-container uk-container-xsmall uk-text-center"}>
             <div className={"uk-inline"} style={{ maxWidth: "200px" }}>
-              <img src={"/images/lock.png"} />
+              <img
+                src={"/images/lock.png"}
+                alt={
+                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
+                }
+              />
               <img
                 src={"/images/dial.png"}
+                alt={
+                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
+                }
                 className={"uk-position-top crack"}
               />
             </div>

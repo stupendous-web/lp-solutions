@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import imagesloaded from "imagesloaded";
+import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
@@ -35,7 +36,13 @@ export default function Home() {
     });
   });
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>
+          Loss Prevention Solutions, Inc. | Your Gold Standard Partner in
+          Profitability | Trimble Enterprises, LLC.
+        </title>
+      </Helmet>
       <div
         className={
           "uk-section uk-section-primary uk-flex uk-flex-center uk-flex-middle uk-background-cover"
@@ -504,6 +511,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

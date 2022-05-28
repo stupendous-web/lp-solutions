@@ -107,7 +107,7 @@ export default function Home() {
             className={"uk-heading-small uk-text-uppercase"}
             uk-scrollspy={"uk-animation-fade"}
           >
-            Your <span className={"uk-text-primary"}>Gold Standard</span>
+            Your <span className={"uk-text-primary"}>Gold Standard</span>{" "}
             Partner in Profitability
           </h2>
           <p uk-scrollspy={"uk-animation-fade"}>

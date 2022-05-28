@@ -10,6 +10,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [hidden, setHidden] = useState(false);
   const [fade, setFade] = useState("uk-hidden");
+  const [review1, setReview1] = useState(false);
 
   useEffect(() => {
     imagesloaded(document, () => {
@@ -34,7 +35,7 @@ export default function Home() {
     });
   });
   return (
-    <>
+    <div>
       <div
         className={
           "uk-section uk-section-primary uk-flex uk-flex-center uk-flex-middle uk-background-cover"
@@ -268,10 +269,14 @@ export default function Home() {
                 Meet Kevin
               </h2>
               <p uk-scrollspy={"uk-animation-fade"}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
-                aut doloremque earum enim, esse exercitationem fugit labore
-                maxime nemo obcaecati quam, quisquam, reiciendis rem sapiente
-                unde? Ducimus labore natus placeat.
+                Kevin has spent the last 30+ years designing and overseeing
+                physical security / loss prevention programs for numerous
+                Fortune 500 companies such as The Home Depot, FedEx Office,
+                T-Mobile, and McDonald’s Corp.
+              </p>
+              <p uk-scrollspy={"uk-animation-fade"}>
+                A seasoned entrepreneur with multiple U.S. Patents issued for LP
+                and retail solutions utilized nationally.
               </p>
               <div className={"uk-margin"}>
                 <div className={"uk-text-bold"}>Say, hi!</div>
@@ -317,103 +322,33 @@ export default function Home() {
                 McDonald&apos;s within the U.S. Security department. Kevin came
                 into McDonald&apos;s at the leadership level and brought a
                 wealth of new ideas and great passion for making positive
-                changes...
-                <span className={"testimonial-1"} hidden>
-                  &nbsp;Kevin&apos;s prior experience was invaluable to our long
-                  term vision and he was never afraid to take that risk of
-                  thinking differently. He was a great team mate, thought
-                  partner, listener and stand up guy which made our work easier
-                  and fun. Now for the real deal...., Unfortunately, in all
-                  business today there are times when profitability takes a
-                  downturn and changes need to happen. Unfortunately for me I
-                  had to take a step down back into the manager role in the
-                  field and you can imagine how it then might feel to have to
-                  report to someone who was peer of yours. Without hesitation
-                  Kevin made that transition very easy for me and without
-                  getting into all the details I&apos;ll just sum it up
-                  &quot;Kevin is a leader of people and understands what it
-                  takes to lead others during challenging times&quot;. He knows
-                  exactly what to do when someone moves his &quot;cheese&quot;.
-                  I&apos;m better today having worked with Kevin and I truly
-                  appreciate him for who he is.
-                </span>
-                <p className={"testimonial-1"}>
-                  <a uk-toggle={".testimonial-1"}>Read more.</a>
-                </p>
+                changes
+                {review1 ? (
+                  <span>
+                    . Kevin&apos;s prior experience was invaluable to our long
+                    term vision and he was never afraid to take that risk of
+                    thinking differently. He was a great team mate, thought
+                    partner, listener and stand up guy which made our work
+                    easier and fun. Now for the real deal...., Unfortunately, in
+                    all business today there are times when profitability takes
+                    a downturn and changes need to happen. Unfortunately for me
+                    I had to take a step down back into the manager role in the
+                    field and you can imagine how it then might feel to have to
+                    report to someone who was peer of yours. Without hesitation
+                    Kevin made that transition very easy for me and without
+                    getting into all the details I&apos;ll just sum it up
+                    &quot;Kevin is a leader of people and understands what it
+                    takes to lead others during challenging times&quot;. He
+                    knows exactly what to do when someone moves his
+                    &quot;cheese&quot;. I&apos;m better today having worked with
+                    Kevin and I truly appreciate him for who he is.
+                  </span>
+                ) : (
+                  <span>... </span>
+                )}
               </p>
-            </div>
-            <div>
-              <div className={"uk-grid-small uk-flex-middle"} uk-grid={""}>
-                <div className={"uk-width-auto"}>
-                  <img
-                    src={
-                      "https://media-exp1.licdn.com/dms/image/C4E03AQHC9W15_6qZZQ/profile-displayphoto-shrink_100_100/0/1517687601029?e=1654128000&v=beta&t=oWLDqcjjyrgPN6eXm09EWNL65v7dF94I0K5vkWjq4lE"
-                    }
-                    alt={
-                      "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability"
-                    }
-                    className={"uk-border-circle"}
-                    style={{ width: "50px" }}
-                  />
-                </div>
-                <div className={"uk-width-expand"}>
-                  <div className={"uk-text-bold"}>
-                    The Pupp Shack Smoke Shop
-                  </div>
-                  <div>Dan Rivers &middot; Cannabis</div>
-                </div>
-              </div>
               <p>
-                There are really no words to describe the knowledge that Kevin
-                bestowed upon me in the short time that we worked together, in
-                his absence in our store he taught me to take the reins when it
-                came to employee safety and training and it was my pleasure to
-                have had the chance to work with such a professional in his
-                field...
-                <span className={"testimonial-2"} hidden>
-                  &nbsp;Any company should jump at the oppurtunity to take
-                  advantage of his vast array of expertise.
-                </span>
-                <p className={"testimonial-2"}>
-                  <a uk-toggle={".testimonial-2"}>Read more.</a>
-                </p>
-              </p>
-            </div>
-            <div>
-              <div className={"uk-grid-small uk-flex-middle"} uk-grid={""}>
-                <div className={"uk-width-auto"}>
-                  <img
-                    src={
-                      "https://media-exp1.licdn.com/dms/image/C4E03AQHZtwPgdnovLg/profile-displayphoto-shrink_400_400/0/1620998883371?e=1654128000&v=beta&t=zO-zt95zJ8L2L4zV3pLql8ojcwYj06oKKQQ6nDi8uqI"
-                    }
-                    alt={
-                      "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability"
-                    }
-                    className={"uk-border-circle"}
-                    style={{ width: "50px" }}
-                  />
-                </div>
-                <div className={"uk-width-expand"}>
-                  <div className={"uk-text-bold"}>DEI&B Practitioner</div>
-                  <div>M Martinez Ruiz &middot; Healthcare</div>
-                </div>
-              </div>
-              <p>
-                Kevin is in every aspect, an all around inspirational leader. He
-                has an ability to stay connected and remain engaged in the
-                business and each of our roles allowing him to lead effectively
-                and giving us the opportunity to grow professionally with so
-                many different variables affecting the business...
-                <span className={"testimonial-3"} hidden>
-                  &nbsp; I have been able to gain a wealth of knowledge and a
-                  more profound appreciationg for my role and my career while
-                  working with Kevin. &quot;It&apos;s about loving what you do
-                  and doing what you love,&quot; thats the type of passion Kevin
-                  has for what he does.
-                </span>
-                <p className={"testimonial-3"}>
-                  <a uk-toggle={".testimonial-3"}>Read more.</a>
-                </p>
+                <a onClick={() => setReview1(true)}>Read more.</a>
               </p>
             </div>
           </div>
@@ -561,6 +496,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

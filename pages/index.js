@@ -14,9 +14,11 @@ export default function Home() {
   const [review1, setReview1] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflowY = "hidden";
     imagesloaded(document, () => {
       setTimeout(() => {
         setLoading(false);
+        document.body.style.overflowY = "auto";
         setTimeout(() => {
           setHidden(true);
           setFade("uk-animation-fade");
@@ -34,7 +36,7 @@ export default function Home() {
         );
       }
     });
-  });
+  }, []);
   return (
     <>
       <Helmet>
@@ -134,7 +136,7 @@ export default function Home() {
               <img
                 src={"/images/products/cages.jpg"}
                 alt={
-                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability"
+                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
                 }
               />
               <h3>Security Cages</h3>
@@ -164,7 +166,7 @@ export default function Home() {
               <img
                 src={"/images/products/safes.jpg"}
                 alt={
-                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability"
+                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
                 }
               />
               <h3>Security Safes</h3>
@@ -197,7 +199,7 @@ export default function Home() {
               <img
                 src={"/images/products/access.jpg"}
                 alt={
-                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability"
+                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
                 }
               />
               <h3>Access Control</h3>
@@ -228,7 +230,7 @@ export default function Home() {
               <img
                 src={"/images/products/alarms.jpg"}
                 alt={
-                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability"
+                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
                 }
               />
               <h3>Alarms & CCTV</h3>
@@ -257,7 +259,7 @@ export default function Home() {
               <img
                 src={"/images/kevin.jpg"}
                 alt={
-                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability"
+                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
                 }
                 uk-scrollspy={"uk-animation-fade"}
               />
@@ -313,7 +315,7 @@ export default function Home() {
                       "https://media-exp1.licdn.com/dms/image/C4E03AQGVL1LBhe6IJA/profile-displayphoto-shrink_100_100/0/1576459890529?e=1654128000&v=beta&t=gyFdUEY2ocuV2zaazVs7kHiBXMzynd4K2a08rSNyB6Y"
                     }
                     alt={
-                      "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability"
+                      "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
                     }
                     className={"uk-border-circle"}
                     style={{ width: "50px" }}
@@ -487,17 +489,24 @@ export default function Home() {
       >
         <div
           className={
-            "uk-section uk-section-primary uk-flex uk-flex-center uk-flex-middle"
+            "uk-section uk-section-default uk-flex uk-flex-center uk-flex-middle"
           }
           uk-height-viewport={""}
         >
           <div className={"uk-container uk-container-xsmall uk-text-center"}>
-            <div className={"uk-inline"} style={{ maxWidth: "200px" }}>
+            <div className={"uk-inline"}>
+              <img
+                src={"/images/logo/master.jpg"}
+                alt={
+                  "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
+                }
+              />
               <img
                 src={"/images/lock.png"}
                 alt={
                   "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
                 }
+                hidden
               />
               <img
                 src={"/images/dial.png"}
@@ -505,6 +514,7 @@ export default function Home() {
                   "Loss Prevention Solutions, Inc. | Your Gold Standard Partner in Profitability | Trimble Enterprises, LLC."
                 }
                 className={"uk-position-top crack"}
+                hidden
               />
             </div>
             <p>Loading...</p>
